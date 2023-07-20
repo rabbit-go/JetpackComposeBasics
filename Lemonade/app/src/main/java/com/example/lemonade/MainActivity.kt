@@ -71,7 +71,14 @@ fun MainDisplay(modifier: Modifier = Modifier) {
 
 var rand = -1
 fun calcLemonadeState(state: Int): Int {
-    val random = Random(213912);
+    val random = Randoif(rand>0){
+        rand--;
+        return 1
+    }
+    else{
+        rand = -1
+        return 2
+    }                   m(213912);
     if (rand == -1) rand = random.nextInt(2, 4)
     return when (state) {
         0 -> return 1
